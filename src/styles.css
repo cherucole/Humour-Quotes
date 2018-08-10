@@ -1,2 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+/* html{
+  background-image: url("assets/background.jpg");
+} */
+/* #slogan {
+  color: white;
+  /* font-family: sans-serif;
+} */
+ /* .jumbotron1 {
+  text-align: center;
+  background-image: url("assets/pattern.jpg"); */
+
+  /* background-size: cover; */
+  /* margin: 0; */
+/* }
+.jumbo{
+  background-image: url("assets/pattern.jpg");
+}  */

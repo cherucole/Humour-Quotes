@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Quote} from '../quote'
 
 @Component({
   selector: 'app-user-input',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-input.component.css']
 })
 export class UserInputComponent implements OnInit {
+  newQuote=new Quote(0,"","",new Date());
 
   constructor() { }
 
