@@ -1,6 +1,10 @@
 <h1>Funny Quotes</h1>
 <ul>
-    <li *ngFor='let quote of quotes'>{{quote.quote}}  by {{quote.timeDate|timeEllapsed}} days after post</li>
+<div      *ngFor='let quote of quotes; let i=index'>
+
+      <li>{{quote.quote}}  by {{quote.timeDate|timeEllapsed}} days after post</li>
+    </div>
+
     <!-- <app-user-input [quote]="quote"></app-user-input> -->
 </ul>
 <!-- <p *ngIf='quotes.length < 5'>You have less quotes</p> -->

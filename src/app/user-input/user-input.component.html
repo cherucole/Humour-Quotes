@@ -1,16 +1,29 @@
 <div class="container">
     <div class="row">
-        <form>
+        <form #quoteForm='ngForm'>
+          <!-- Name of the form -->
             <div class="form-group">
 
-                <label for="name">Name</label>
-                <input style="width:100%;" type="text" required class="form-control" id="name">
+                <label for="author">Author Name</label>
+                <input style="width:100%;" type="text"  class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+                <!-- Display {{newQuote.author}} -->
+                <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+<p>Author Name is required</p>
+                </div>
+
 
             </div>
             <div class="form-group">
 
-                <label for="description">Description</label>
-                <textarea style="width:200%;" class="form-control" id="description" rows="4" required></textarea>
+                <label for="quote">Your Funny Quote</label>
+                <textarea style="width:200%;" class="form-control" id="quote" rows="3" required></textarea>
+
+            </div>
+            <div class="form-group">
+
+                <label for="publisher">Publisher Name</label>
+                <input style="width:100%;" type="text" required class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher">
+
 
             </div>
             <div class="form-group">
