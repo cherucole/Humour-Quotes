@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import {Quote} from '../quote'
+// export class UserInputComponent implements OnInit{
+
+
+
 
 @Component({
   selector: 'app-user-input',
@@ -7,7 +11,11 @@ import {Quote} from '../quote'
   styleUrls: ['./user-input.component.css']
 })
 export class UserInputComponent implements OnInit {
-  newQuote=new Quote(0,"","",new Date());
+  newQuote= new Quote("", "", "", new Date());
+  @Output() addQuote= new EventEmitter<Quote>();
+  SubmitQuote(){
+    this.addQuote.emit(this.newQuote);
+  }
 
   constructor() { }
 

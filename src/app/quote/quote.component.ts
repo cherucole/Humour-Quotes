@@ -16,13 +16,27 @@ new Quote("cherucole", "my alarm is jealous of me and my bed", "cherucole", new 
 
 ]
 
+
+
 goalComplete(complete:boolean){
   this.isComplete.emit(complete);
 }
+completeGoal(isComplete,index){
+       if (isComplete){
+           this.goals.splice(index,1);
+           }
+           }
 
-  constructor() { }
+           addNewQuote(quote){
+                   let quoteLength = this.quotes.length;
+                   quote.id=quoteLength+1;
+                   quote.completeDate = new Date(goal.completeDate)
+                   this.quotes.push(quote)
 
-  ngOnInit() {
+  constructor(); { }
+
+  ngOnInit(); {
   }
 
+}
 }
