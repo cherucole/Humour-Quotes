@@ -1,45 +1,48 @@
 <div class="container">
-    <div class="row">
-        <form (ngSubmit)='submitGoal()' #goalForm='ngForm'>
-          <!-- Name of the form -->
-            <div class="form-group">
+  <div class="row">
+    <form (ngSubmit)='submitGoal()' #goalForm='ngForm'>
+      <!-- Name of the form -->
+      <div class="form-group">
 
-                <label for="author">Author Name</label>
-                <input style="width:100%;" type="text"  class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
-                <!-- Display {{newQuote.author}} -->
-                <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-<p>Author Name is required</p>
-                </div>
+        <label for="author">Author Name</label>
+        <input style="width:100%;" type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author"
+          #author="ngModel" required>
+        <!-- Display {{newQuote.author}} -->
+        <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+          <p>Author Name is required</p>
+        </div>
 
 
-            </div>
-            <!-- The Quote Input -->
-            <div class="form-group">
+      </div>
+      <!-- The Quote Input -->
+      <div class="form-group">
 
-                <label for="quote">Your Funny Quote</label>
-                <textarea style="width:200%;" class="form-control" id="quote" rows="3" [(ngModel)]="newQuote.quote" name="quote"  #quote="ngModel" required></textarea>
-                <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
-                    <p> Quote is Required</p>
+        <label for="quote">Your Funny Quote</label>
+        <textarea style="width:200%;" class="form-control" id="quote" rows="3" [(ngModel)]="newQuote.quote" name="quote"
+          #quote="ngModel" required></textarea>
+        <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+          <p> Quote is Required</p>
 
-                </div>
+        </div>
 
-            </div>
-            <div class="form-group">
+      </div>
+      <div class="form-group">
 
-                <label for="author">Publisher Name</label>
-                <input style="width:100%;" type="text"  class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher="ngModel" required>
-                <!-- Display {{newQuote.author}} -->
-                <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
-<p>Publisher name is required</p>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="complete">Completion</label>
-                <input style="width:200%;" type='date' id="complete" required>
+        <label for="author">Publisher Name</label>
+        <input style="width:100%;" type="text" class="form-control" id="publisher" [(ngModel)]="newQuote.publisher"
+          name="publisher" #publisher="ngModel" required>
+        <!-- Display {{newQuote.author}} -->
+        <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
+          <p>Publisher name is required</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="complete">Completion</label>
+        <input style="width:200%;" type='date' id="complete" required>
 
-            </div>
-            <button type="Submit" class="btn btn-success btn-lg">Add Quote</button>
+      </div>
+      <button type="Submit" class="btn btn-success btn-lg">Add Quote</button>
 
-        </form>
-    </div>
+    </form>
+  </div>
 </div>

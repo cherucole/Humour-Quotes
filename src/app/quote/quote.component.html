@@ -1,13 +1,13 @@
 <h1>Funny Quotes</h1>
 <ul>
-<div      *ngFor='let quote of quotes; let i=index'>
+  <div *ngFor='let quote of quotes; let i=index'>
 
-      <li>{{quote.quote}}  by {{quote.timeDate|timeEllapsed}} days after post</li>
-      <!-- <app-quote-details [quote]='quote'></app-quote-details> -->
+    <li>{{quote.quote}} by {{quote.timeDate|timeEllapsed}} days after post</li>
+    <!-- <app-quote-details [quote]='quote'></app-quote-details> -->
 
-    </div>
-    <button (click) = 'quoteComplete(true)'>Delete Quote </button>
+  </div>
+  <button (click)='quoteComplete(true)'>Delete Quote </button>
 
-    <!-- <app-user-input [quote]="quote"></app-user-input> -->
+  <!-- <app-user-input [quote]="quote"></app-user-input> -->
 </ul>
 <!-- <p *ngIf='quotes.length < 5'>You have less quotes</p> -->
